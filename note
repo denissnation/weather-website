@@ -1,0 +1,9 @@
+npm i express@4.16.4
+
+import express in app.js
+
+npm i hbs
+template engine
+
+nodemon src/app.js -e js,hbs
+agar nodemen melakukan restart ketika file berekstensi hbs dilakukan perubahan
