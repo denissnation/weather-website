@@ -34,4 +34,12 @@ setting up ssh key;
 
 
 setup ssh key for Heroku
-1. heroku key:add
+1. heroku keys:add
+2. create heroku application with, heroku create den-weather-app
+3. add in package.json "scripts": {
+		"start": "node src/app.js"
+	}, it will bun run with command npm run start, and heroku will do the same thing
+4. change app.js const port = process.env.PORT, and app.listen(port, () => {
+	console.log('Server is up in port ' + port);
+});;
+5. change public/js/app.js,  fetch('/weather?address=' + location)
