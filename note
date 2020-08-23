@@ -17,3 +17,21 @@ git status //untuk melihat status file2
 2. git add . untuk staging file semuanya
 
 3. git commit -m "name"
+
+
+setting up ssh key;
+1. open in git bash, 
+2. ls -a -l ~/.ssh kalau sudah ada id_rsa dan id_rsa.pub berarti ssh sudah ada, kalau belum
+3. ssh-keygen -t rsa -b 4096 -C "dnisnast@gmail.com"
+4. eval $(ssh-agent -s)
+5. ssh-add
+6. create new repository in github, and copy paste in cmd git remote add origin https://github.com/denissnation/weather-website.git,
+7. setting ssh di github di setting SSH & GPG keys 
+8. cat ~/.ssh/id_rsa.pub
+9. copy and paste ke github
+10. test it with ssh -T git@github.com
+11. git push -u origin master
+
+
+setup ssh key for Heroku
+1. heroku key:add
