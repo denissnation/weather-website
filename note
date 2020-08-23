@@ -7,3 +7,13 @@ template engine
 
 nodemon src/app.js -e js,hbs
 agar nodemen melakukan restart ketika file berekstensi hbs dilakukan perubahan
+
+
+menggunakan git
+1. git init
+
+git status //untuk melihat status file2
+2. git add .src/ untuk staging file spesifik
+2. git add . untuk staging file semuanya
+
+3. git commit -m "name"
