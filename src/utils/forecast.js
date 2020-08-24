@@ -24,6 +24,7 @@ const forecast = (lat, long, callback) => {
 
 	// setelah  destructuring
 	request({ url, json: true }, (error, { body }) => {
+		console.log(body);
 		if (error) {
 			callback('Unable connect to the service', undefined);
 		} else if (body.error) {
@@ -37,7 +38,11 @@ const forecast = (lat, long, callback) => {
 					' degrees out.' +
 					' It feels like ' +
 					body.current.feelslike +
-					' degrees out'
+					' degrees out ' +
+					'the wind speed is ' +
+					body.current.wind_speed +
+					' and the wind degree ' +
+					body.current.wind_degree
 			);
 		}
 	});
