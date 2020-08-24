@@ -39,7 +39,11 @@ setup ssh key for Heroku
 3. add in package.json "scripts": {
 		"start": "node src/app.js"
 	}, it will bun run with command npm run start, and heroku will do the same thing
+
+    NB: IF YOU LOSE YOUR  package.json JUST RECOVERY IT USING npm init -y
 4. change app.js const port = process.env.PORT, and app.listen(port, () => {
 	console.log('Server is up in port ' + port);
 });;
-5. change public/js/app.js,  fetch('/weather?address=' + location)
+5. change public/js/app.js,  fetch('/weather?address=' + location),
+6. to view all the remote git use git remote
+7. to deploy use: git push heroku master
